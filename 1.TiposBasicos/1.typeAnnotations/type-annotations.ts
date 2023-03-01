@@ -3,7 +3,7 @@ let nome: string = "Iarlen"; // Qual tipo de string
 let idade: number = 21; // Qualquer tipo de número
 let adulto: boolean = true; // true ou false
 let simbolo: symbol = Symbol("qualquer-symbol"); // symbol
-let big: bigint = 10n; // bigint
+//let big: bigint = 10n; // bigint
 
 // Tipos passados por refêrencia (array, objetos):
 
