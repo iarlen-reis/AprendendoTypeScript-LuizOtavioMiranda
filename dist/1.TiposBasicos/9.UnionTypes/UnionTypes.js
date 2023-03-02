@@ -1,9 +1,4 @@
 "use strict";
-/*
-Aprendendo Union Types:
-- Seria basicamente informar que o retorno de uma função ou até mesmo váriavel
-    tem mais de um tipo.
-*/
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.addOrCocat = void 0;
 function addOrCocat(a, b) {

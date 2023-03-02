@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Collaborator = exports.Company = void 0;
+exports.Udemy = exports.Collaborator = exports.Company = void 0;
 class Company {
     constructor(name, cnpj) {
         this.collaborators = [];
@@ -22,11 +22,19 @@ class Collaborator {
     }
 }
 exports.Collaborator = Collaborator;
-const company = new Company("Udemy", "11.111.111/0001-11");
+class Udemy extends Company {
+    constructor() {
+        super("Udemy", "11.111.111/0001-11");
+    }
+    popCollaborator() {
+        const collaborator = this.collaborators.pop();
+        return collaborator ? collaborator : null;
+    }
+}
+exports.Udemy = Udemy;
+const company = new Udemy();
 const collaborator1 = new Collaborator("Iarlen", "Reis");
 const collaborator2 = new Collaborator("Klay", "Thompson");
 company.addCollaborator(collaborator1);
 company.addCollaborator(collaborator2);
-console.log(company);
-console.log();
-company.showCollaborators();
+const removeCollaborator = company.popCollaborator();
